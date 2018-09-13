@@ -1,0 +1,31 @@
+`timescale 10 ns / 10 ns
+module ROM
+#(
+	parameter MEM_SIZE = 9,
+	//parameter MEM_SIZE = 3,
+	parameter WORD_WIDTH = 16,
+	parameter MSB_DATA = 16,
+	parameter MSB_ROM = 11,
+	parameter LSB = 0,
+	parameter MSB = 0
+)
+(
+	ADDR_im_i, //Endereço
+	DATA_im_o //Valor
+);
+input wire [(MSB_ROM-1):LSB] ADDR_im_i;
+
+output reg [(MSB_DATA-1):LSB] DATA_im_o;
+
+reg [(WORD_WIDTH)-1:LSB] ROM_mem[MSB:(MEM_SIZE-1)];
+
+initial
+begin
+	$readmemb("C:/intelFPGA_lite/17.1/Aulas/BIP2v3/programMemory.list", ROM_mem);
+	DATA_im_o = ROM_mem[ADDR_im_i];
+end
+always @(ADDR_im_i)
+begin
+	DATA_im_o = ROM_mem[ADDR_im_i];
+end
+endmodule 

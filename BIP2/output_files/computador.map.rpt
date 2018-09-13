@@ -1,0 +1,538 @@
+Analysis & Elaboration report for computador
+Wed Sep 12 14:04:39 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |computador
+  5. Parameter Settings for User Entity Instance: processor_bip2:CPU
+  6. Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0
+  7. Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|decoder:DEC
+  8. Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|incrementer:INC
+  9. Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|mux_2x1:MUX
+ 10. Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|PC:PC0
+ 11. Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0
+ 12. Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|extensor:EXT0
+ 13. Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|mux_3x2:MUX3
+ 14. Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|ACC:ACC
+ 15. Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|mux_2x1:MUX2
+ 16. Parameter Settings for User Entity Instance: ROM:ROM0
+ 17. Parameter Settings for User Entity Instance: RAM:RAM0
+ 18. Analysis & Elaboration Settings
+ 19. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Wed Sep 12 14:04:39 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; computador                                  ;
+; Top-level Entity Name              ; computador                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
+; UFM blocks                         ; N/A until Partition Merge                   ;
+; ADC blocks                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |computador ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; MSB_DATA       ; 16    ; Signed Integer                                    ;
+; MSB_ROM        ; 11    ; Signed Integer                                    ;
+; MSB_OPERAND    ; 11    ; Signed Integer                                    ;
+; LSB            ; 0     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; MSB_DATA       ; 16    ; Signed Integer                         ;
+; MSB_ROM        ; 11    ; Signed Integer                         ;
+; MSB_OPERAND    ; 11    ; Signed Integer                         ;
+; MSB_SELA       ; 2     ; Signed Integer                         ;
+; LSB            ; 0     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                            ;
+; MSB_Data       ; 16    ; Signed Integer                                            ;
+; MSB_OP         ; 5     ; Signed Integer                                            ;
+; LSB            ; 0     ; Signed Integer                                            ;
+; SEL_A          ; 2     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|decoder:DEC ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; OPCODE_WIDTH   ; 5     ; Signed Integer                                                        ;
+; LSB            ; 0     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|incrementer:INC ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                            ;
+; LSB            ; 0     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|mux_2x1:MUX ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                        ;
+; LSB            ; 0     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|controle:Controle0|PC:PC0 ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                   ;
+; LSB            ; 0     ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; MSB_DATA       ; 16    ; Signed Integer                                            ;
+; MSB_OPERAND    ; 11    ; Signed Integer                                            ;
+; MSB_ROM        ; 11    ; Signed Integer                                            ;
+; MSB_OP         ; 1     ; Signed Integer                                            ;
+; MSB_SELA       ; 2     ; Signed Integer                                            ;
+; LSB            ; 0     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|extensor:EXT0 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                          ;
+; LSB            ; 0     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|mux_3x2:MUX3 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                         ;
+; SELA           ; 2     ; Signed Integer                                                         ;
+; LSB            ; 0     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|ACC:ACC ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                    ;
+; LSB            ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor_bip2:CPU|datapath:Datapath0|mux_2x1:MUX2 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; MSB_ROM        ; 11    ; Signed Integer                                                         ;
+; LSB            ; 0     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM0 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; MEM_SIZE       ; 4     ; Signed Integer               ;
+; WORD_WIDTH     ; 16    ; Signed Integer               ;
+; MSB_DATA       ; 16    ; Signed Integer               ;
+; MSB_ROM        ; 11    ; Signed Integer               ;
+; LSB            ; 0     ; Signed Integer               ;
+; MSB            ; 0     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:RAM0 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; MEM_SIZE       ; 1023  ; Signed Integer               ;
+; WORD_WIDTH     ; 11    ; Signed Integer               ;
+; MSB_RAM        ; 11    ; Signed Integer               ;
+; LSB            ; 0     ; Signed Integer               ;
+; MSB            ; 0     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                                      ; computador         ; computador         ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Sep 12 14:04:24 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BIP2v3 -c computador --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ulateste.v
+    Info (12023): Found entity 1: UlaTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/UlaTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: Ula File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/Ula.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rom_teste.v
+    Info (12023): Found entity 1: ROM_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: ROM File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ram_teste.v
+    Info (12023): Found entity 1: RAM_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/RAM_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/RAM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file processor_bip2.v
+    Info (12023): Found entity 1: processor_bip2 File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/processor_bip2.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file pc_teste.v
+    Info (12023): Found entity 1: PC_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux_3x2_teste.v
+    Info (12023): Found entity 1: mux_3x2_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_3x2.v
+    Info (12023): Found entity 1: mux_3x2 File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_teste.v
+    Info (12023): Found entity 1: mux_2x1_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1.v
+    Info (12023): Found entity 1: mux_2x1 File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file incrementerteste.v
+    Info (12023): Found entity 1: incrementTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/incrementerTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file incrementer.v
+    Info (12023): Found entity 1: incrementer File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/incrementer.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file flags_teste.v
+    Info (12023): Found entity 1: FLAGS_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/FLAGS_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file flags.v
+    Info (12023): Found entity 1: FLAGS File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/FLAGS.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file extensorteste.v
+    Info (12023): Found entity 1: extensorTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/extensorTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file extensor.v
+    Info (12023): Found entity 1: extensor File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/extensor.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file decoderteste.v
+    Info (12023): Found entity 1: decoderTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoderTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
+    Info (12023): Found entity 1: decoder File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file datapathteste.v
+    Info (12023): Found entity 1: datapathTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapathTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file controle.v
+    Info (12023): Found entity 1: controle File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/controle.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file control_teste.v
+    Info (12023): Found entity 1: Control_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/Control_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file computadorteste.v
+    Info (12023): Found entity 1: computadorTeste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/computadorTeste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file computador.v
+    Info (12023): Found entity 1: computador File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/computador.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file acc_teste.v
+    Info (12023): Found entity 1: ACC_Teste File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ACC_Teste.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file acc.v
+    Info (12023): Found entity 1: ACC File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ACC.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file if.v
+    Info (12023): Found entity 1: IF File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/if.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file if_teste.v
+    Info (12023): Found entity 1: IF_TESTE File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/IF_TESTE.v Line: 3
+Info (12127): Elaborating entity "computador" for the top level hierarchy
+Info (12128): Elaborating entity "processor_bip2" for hierarchy "processor_bip2:CPU" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/computador.v Line: 36
+Info (12128): Elaborating entity "controle" for hierarchy "processor_bip2:CPU|controle:Controle0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/processor_bip2.v Line: 60
+Info (12128): Elaborating entity "decoder" for hierarchy "processor_bip2:CPU|controle:Controle0|decoder:DEC" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/controle.v Line: 59
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(88): variable "ESTADOATUAL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 88
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(98): variable "Opcode_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 98
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(144): variable "FZ_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 144
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(151): variable "FZ_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 151
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(158): variable "FZ_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 158
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(158): variable "FN_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 158
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(165): variable "FN_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 165
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(172): variable "FN_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 172
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(179): variable "FZ_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 179
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(179): variable "FN_Anterior" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 179
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(98): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 98
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(203): variable "reset_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 203
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(218): variable "ESTADOATUAL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 218
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(229): variable "Opcode_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 229
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(229): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 229
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(238): variable "n_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 238
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(239): variable "z_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 239
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(218): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 218
+Info (10264): Verilog HDL Case Statement information at decoder.v(218): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 218
+Warning (10235): Verilog HDL Always Construct warning at decoder.v(252): variable "PROXIMOESTADO" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 252
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "PROXIMOESTADO", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "Branch_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "ESTADOATUAL", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "SelB_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "Op_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "SelA_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "reset_pc_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "Wrpc_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "Wracc_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "Wrram_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "FN_Anterior", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(82): inferring latch(es) for variable "FZ_Anterior", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 82
+Info (10041): Inferred latch for "FZ_Anterior" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "FN_Anterior" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "Wrram_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "Wracc_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "Wrpc_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "reset_pc_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "SelA_o[0]" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "SelA_o[1]" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "Op_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "SelB_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "ESTADOATUAL.RESET" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "ESTADOATUAL.EXECUCAO" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "ESTADOATUAL.DECODIFICACAO" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "ESTADOATUAL.BUSCA" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "Branch_o" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "PROXIMOESTADO.RESET" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "PROXIMOESTADO.EXECUCAO" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "PROXIMOESTADO.DECODIFICACAO" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (10041): Inferred latch for "PROXIMOESTADO.BUSCA" at decoder.v(215) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/decoder.v Line: 215
+Info (12128): Elaborating entity "incrementer" for hierarchy "processor_bip2:CPU|controle:Controle0|incrementer:INC" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/controle.v Line: 67
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "processor_bip2:CPU|controle:Controle0|mux_2x1:MUX" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/controle.v Line: 76
+Warning (10240): Verilog HDL Always Construct warning at mux_2x1.v(20): inferring latch(es) for variable "pc_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 20
+Info (10041): Inferred latch for "pc_o[0]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[1]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[2]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[3]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[4]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[5]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[6]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[7]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[8]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[9]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (10041): Inferred latch for "pc_o[10]" at mux_2x1.v(26) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_2x1.v Line: 26
+Info (12128): Elaborating entity "PC" for hierarchy "processor_bip2:CPU|controle:Controle0|PC:PC0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/controle.v Line: 86
+Warning (10235): Verilog HDL Always Construct warning at PC.v(29): variable "reset_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at PC.v(30): variable "enable_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at PC.v(32): variable "mux_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 32
+Warning (10235): Verilog HDL Always Construct warning at PC.v(37): variable "reset_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 37
+Warning (10240): Verilog HDL Always Construct warning at PC.v(25): inferring latch(es) for variable "pc_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 25
+Info (10041): Inferred latch for "pc_o[0]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[1]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[2]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[3]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[4]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[5]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[6]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[7]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[8]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[9]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (10041): Inferred latch for "pc_o[10]" at PC.v(35) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/PC.v Line: 35
+Info (12128): Elaborating entity "datapath" for hierarchy "processor_bip2:CPU|datapath:Datapath0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/processor_bip2.v Line: 77
+Info (12128): Elaborating entity "extensor" for hierarchy "processor_bip2:CPU|datapath:Datapath0|extensor:EXT0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 67
+Info (12128): Elaborating entity "mux_3x2" for hierarchy "processor_bip2:CPU|datapath:Datapath0|mux_3x2:MUX3" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 77
+Warning (10270): Verilog HDL Case Statement warning at mux_3x2.v(25): incomplete case statement has no default case item File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 25
+Warning (10240): Verilog HDL Always Construct warning at mux_3x2.v(23): inferring latch(es) for variable "mux_3x2_o", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[0]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[1]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[2]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[3]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[4]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[5]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[6]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[7]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[8]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[9]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (10041): Inferred latch for "mux_3x2_o[10]" at mux_3x2.v(23) File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/mux_3x2.v Line: 23
+Info (12128): Elaborating entity "ACC" for hierarchy "processor_bip2:CPU|datapath:Datapath0|ACC:ACC" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 86
+Info (12128): Elaborating entity "Ula" for hierarchy "processor_bip2:CPU|datapath:Datapath0|Ula:ULA0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 106
+Info (12128): Elaborating entity "FLAGS" for hierarchy "processor_bip2:CPU|datapath:Datapath0|FLAGS:FLAGS0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/datapath.v Line: 115
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/computador.v Line: 43
+Warning (10855): Verilog HDL warning at ROM.v(23): initial value for variable DATA_im_o should be constant File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM.v Line: 23
+Warning (10030): Net "ROM_mem.data_a" at ROM.v(20) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM.v Line: 20
+Warning (10030): Net "ROM_mem.waddr_a" at ROM.v(20) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM.v Line: 20
+Warning (10030): Net "ROM_mem.we_a" at ROM.v(20) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/ROM.v Line: 20
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM0" File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/computador.v Line: 52
+Warning (10235): Verilog HDL Always Construct warning at RAM.v(32): variable "IN_DATA_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.1/Aulas/BIP2v3/RAM.v Line: 32
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 4733 megabytes
+    Info: Processing ended: Wed Sep 12 14:04:39 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:29
+
+

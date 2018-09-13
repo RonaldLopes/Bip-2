@@ -1,0 +1,21 @@
+.data
+   x : 0
+.text
+_PRINCIPAL:
+   LDI     1
+   STO     x
+   LDI     2
+   STO     1000
+   LDI     2
+   STO     1001
+   LD      1000
+   SUB     1001
+   BNE     ELSE1
+   LDI     30
+   STO     x
+   JMP     FIMSE1
+ELSE1:
+   LDI     60
+   STO     x
+FIMSE1:
+   HLT     0

@@ -1,0 +1,63 @@
+`timescale 10 ns / 10 ns
+
+module computadorTeste;
+
+//Inputs
+reg CLOCK_i;
+
+computador DUT(CLOCK_i);
+initial
+	begin
+	
+	CLOCK_i = 1'b0;
+
+	#10 CLOCK_i = 1'b1;//1
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//2
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//3
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//4
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//5
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//6
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//7
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//8
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//9
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//10
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//11
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//12
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//13
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//14
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//15
+	#10 CLOCK_i = 1'b0;
+	
+	#10 CLOCK_i = 1'b1;//16
+	#10 CLOCK_i = 1'b0;
+	
+	end
+endmodule 

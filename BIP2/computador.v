@@ -1,0 +1,55 @@
+`timescale 10 ns/10 ns 
+module computador
+#(
+	parameter MSB_DATA = 16,
+	parameter MSB_ROM = 11,
+	parameter MSB_OPERAND = 11,
+	parameter LSB = 0
+)
+(
+// INTERFACE SISTEMA
+	CLOCK_i,	  //Clock do sistema
+	RESET_i
+);
+
+input wire CLOCK_i;
+input wire RESET_i;
+
+wire [(MSB_ROM-1):LSB] waddr_ROM;
+wire [(MSB_DATA-1):LSB] wdata_ROM;
+wire wrRAM;
+wire [(MSB_OPERAND-1):LSB] waddr_RAM;
+wire [(MSB_OPERAND-1):LSB] wINdata_RAM;
+wire [(MSB_OPERAND-1):LSB] wOUTdata_RAM;
+
+processor_bip2
+CPU
+(
+	.RESET_i (RESET_i),
+	.CLOCK_i(CLOCK_i),
+	.ADDR_im_o(waddr_ROM), 
+	.DATA_im_i(wdata_ROM), 
+	.WRRAM_o(wrRAM),
+	.ADDR_dm_o(waddr_RAM),
+	.IN_DATA_o(wINdata_RAM),
+	.OUT_DATA_i(wOUTdata_RAM)
+);
+
+ROM
+ROM0
+(
+	.ADDR_im_i(waddr_ROM), 
+	.DATA_im_o(wdata_ROM) 
+);
+
+RAM
+RAM0
+(
+	.WR_i(wrRAM),
+	.ADDR_dm_i(waddr_RAM), //Endereço
+	.IN_DATA_i(wINdata_RAM),
+	.OUT_DATA_o(wOUTdata_RAM)
+);
+
+endmodule
+

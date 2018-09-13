@@ -1,0 +1,126 @@
+`timescale 10 ns / 10 ns
+module decoder
+#(
+	parameter OPCODE_WIDTH = 5,
+	parameter LSB = 0
+)
+(
+	clock_i, //clock
+	Opcode_i, //Código de instrução
+	n_i, //flag negativa
+	z_i, //flag zero
+	
+	Branch_o, //Seletor para o PC
+	Wrpc_o, //Habilita escrita no PC
+	SelA_o, //Seleciona qual valor vai para o Acumulador
+	SelB_o, //Seleciona qual valor vai para a 2ª entrada da ULA
+	Wracc_o, //Habilita a escrita no Acumulador
+	Op_o, //Código para a ULA
+	Wrram_o
+);
+input wire clock_i;
+input wire [(OPCODE_WIDTH-1):LSB] Opcode_i;
+input wire n_i;
+input wire z_i;
+
+output reg Branch_o = 1'b0;
+output reg Wrpc_o = 1'b0;
+output reg [1:0] SelA_o = 2'b0;
+output reg SelB_o = 1'b0;
+output reg Wracc_o = 1'b0;
+output reg Op_o = 1'b0; // 0 = soma e 1 = subtração
+output reg Wrram_o = 1'b0; 
+
+always @(posedge clock_i)
+begin 
+  Branch_o = 1'b0;
+  Wrpc_o = 1'b0;
+  SelA_o = 2'b00;
+  SelB_o = 1'b0;
+  Wracc_o = 1'b0;
+  Op_o = 1'b0;
+  Wrram_o = 1'b0; 
+	case (Opcode_i)
+		5'b00001: //STO
+		begin
+			Wracc_o = 1'b1;
+			Wrram_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b00010: //LD
+		begin
+			Wracc_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b00011: //LDI
+		begin
+			Wracc_o = 1'b1;
+			SelA_o = 2'b01;
+			Wrpc_o = 1'b1;
+		end
+		5'b00100: //ADD
+		begin
+			SelA_o = 2'b10;
+			Wracc_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b00101: //ADDI
+		begin
+			SelB_o = 1'b1;
+			SelA_o = 2'b10;
+			Wracc_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b00110: //SUB
+		begin
+			Op_o = 1'b1;
+			SelA_o = 2'b01;
+			Wracc_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end	
+		5'b00111: //SUBI
+		begin
+			Op_o = 1'b1;
+			SelB_o = 1'b1;
+			SelA_o = 2'b10;
+			Wracc_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01000: //BEQ
+		begin
+			if (z_i == 1'b1) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01001: //BNE
+		begin
+			if (z_i == 1'b0) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01010: //BGT
+		begin
+			if ((z_i == 1'b0) && (n_i == 1'b0)) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01011: //BGE
+		begin
+			if (n_i == 1'b0) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01100: //BLT
+		begin
+			if (n_i == 1'b1) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01101: //BLE
+		begin
+			if ((z_i == 1'b1) && (n_i == 1'b1)) Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+		5'b01110: //JMP
+		begin
+			Branch_o = 1'b1;
+			Wrpc_o = 1'b1;
+		end
+	endcase
+end
+endmodule
